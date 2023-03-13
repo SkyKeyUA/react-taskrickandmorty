@@ -2,9 +2,14 @@
 
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
+import cardsSlice from './cards/slice';
+import filterSlice from './filter/slice';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    cardsSlice,
+    filterSlice,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
