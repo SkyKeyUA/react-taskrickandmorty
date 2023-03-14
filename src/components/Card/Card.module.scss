@@ -37,10 +37,24 @@
     margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
-    color: rgba(0, 0, 0, 0.87);
     flex: 1 1;
+    a,
+    a:visited {
+      transition: all 0.3s ease 0s;
+      color: rgba(0, 0, 0, 0.87);
+      &:hover {
+        opacity: 0.6;
+      }
+    }
   }
   &__text {
-    color: rgba(0, 0, 0, 0.6);
+    a,
+    a:visited {
+      transition: all 0.3s ease 0s;
+      color: rgba(0, 0, 0, 0.6);
+      &:hover {
+        opacity: 0.6;
+      }
+    }
   }
 }

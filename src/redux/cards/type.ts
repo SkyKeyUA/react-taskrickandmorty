@@ -9,6 +9,7 @@ export type Cards = {
   gender: string;
   image: string;
   url: string;
+  origin: string[];
 };
 export enum Status {
   LOADING = 'loading',

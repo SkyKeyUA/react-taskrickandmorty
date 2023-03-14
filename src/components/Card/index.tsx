@@ -1,6 +1,7 @@
 /** @format */
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { Cards } from '../../redux/cards/type';
 import { selectFilter } from '../../redux/filter/selectors';
 import { Highlight } from '../Highlight';
@@ -16,11 +17,21 @@ export const Card: React.FC<Cards> = ({ id, name, species, image }) => {
   return (
     <div className={styles['card']}>
       <div className={styles['card__image']}>
-        <img src={image} alt="" />
+        <Link key={id} to={`/fullstory/${id}`}>
+          <img src={image} alt="ImgCard" />
+        </Link>
       </div>
       <div className={styles['card__info']}>
-        <div className={styles['card__title']}>{light(name)}</div>
-        <div className={styles['card__text']}>{species}</div>
+        <div className={styles['card__title']}>
+          <Link key={id} to={`/fullstory/${id}`}>
+            {light(name)}
+          </Link>
+        </div>
+        <div className={styles['card__text']}>
+          <Link key={id} to={`/fullstory/${id}`}>
+            {species}
+          </Link>
+        </div>
       </div>
     </div>
   );
