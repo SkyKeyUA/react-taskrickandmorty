@@ -13,10 +13,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
-        <Route path="/" element={<Home />} />
+        <Route path="/react-taskrickandmorty" element={<Home />} />
       </Route>
       <Route
-        path="/fullstory/:id"
+        path="/react-taskrickandmorty/fullstory/:id"
         element={
           <React.Suspense fallback={<div className="wrapper">Loading...</div>}>
             <FullStory />

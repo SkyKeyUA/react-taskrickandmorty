@@ -17,18 +17,18 @@ export const Card: React.FC<Cards> = ({ id, name, species, image }) => {
   return (
     <div className={styles['card']}>
       <div className={styles['card__image']}>
-        <Link key={id} to={`/fullstory/${id}`}>
+        <Link key={id} to={`/react-taskrickandmorty/fullstory/${id}`}>
           <img src={image} alt="ImgCard" />
         </Link>
       </div>
       <div className={styles['card__info']}>
         <div className={styles['card__title']}>
-          <Link key={id} to={`/fullstory/${id}`}>
+          <Link key={id} to={`/react-taskrickandmorty/fullstory/${id}`}>
             {light(name)}
           </Link>
         </div>
         <div className={styles['card__text']}>
-          <Link key={id} to={`/fullstory/${id}`}>
+          <Link key={id} to={`/react-taskrickandmorty/fullstory/${id}`}>
             {species}
           </Link>
         </div>

@@ -26,7 +26,7 @@ const Home: React.FC = () => {
     <div className="content">
       <div className="content__container">
         <div className="content__logo">
-          <img src="/img/logo.png" alt="" />
+          <img src="img/logo.png" alt="ImgLogo" />
         </div>
         <Search />
         <div className="content__items">

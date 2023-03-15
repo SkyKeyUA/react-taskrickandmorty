@@ -51,7 +51,7 @@ export const FullInfo: React.FC = () => {
     <div className={styles['fullstory']}>
       <div className={styles['fullstory__container']}>
         <div className={styles['fullstory__btn']}>
-          <Link to="/">
+          <Link to="/react-taskrickandmorty/">
             <svg
               width="16"
               height="16"
