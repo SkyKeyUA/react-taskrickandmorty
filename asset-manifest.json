@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-taskrickandmorty/static/css/main.a20a558f.css",
+    "main.js": "/react-taskrickandmorty/static/js/main.1d63ad5d.js",
+    "FullStory.css": "/react-taskrickandmorty/static/css/FullStory.38f89904.chunk.css",
+    "FullStory.js": "/react-taskrickandmorty/static/js/FullStory.fda1502d.chunk.js",
+    "index.html": "/react-taskrickandmorty/index.html",
+    "main.a20a558f.css.map": "/react-taskrickandmorty/static/css/main.a20a558f.css.map",
+    "main.1d63ad5d.js.map": "/react-taskrickandmorty/static/js/main.1d63ad5d.js.map",
+    "FullStory.38f89904.chunk.css.map": "/react-taskrickandmorty/static/css/FullStory.38f89904.chunk.css.map",
+    "FullStory.fda1502d.chunk.js.map": "/react-taskrickandmorty/static/js/FullStory.fda1502d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a20a558f.css",
+    "static/js/main.1d63ad5d.js"
+  ]
+}
