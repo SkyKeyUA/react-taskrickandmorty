@@ -17,6 +17,7 @@ const Home: React.FC = () => {
   const itemsFilter = items.filter((obj) => {
     return obj.name.toLowerCase().includes(searchValue.toLowerCase());
   });
+  const itemsSort = itemsFilter.sort((a, b) => a.name.localeCompare(b.name));
   React.useEffect(() => {
     dispatch(fetchCards());
   }, [dispatch]);
@@ -31,7 +32,7 @@ const Home: React.FC = () => {
         <div className="content__items">
           {status === 'loading'
             ? skeletons
-            : itemsFilter.map((obj: any) => <Card key={obj.id} {...obj} />)}
+            : itemsSort.map((obj: any) => <Card key={obj.id} {...obj} />)}
         </div>
       </div>
     </div>
