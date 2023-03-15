@@ -1,10 +1,11 @@
 /** @format */
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { getSearchFromLS } from '../../utils/getSearchFromLS';
 import { FilterSliceState } from './types';
 
 const initialState: FilterSliceState = {
-  searchValue: '',
+  searchValue: getSearchFromLS(),
 };
 
 export const filterSlice = createSlice({

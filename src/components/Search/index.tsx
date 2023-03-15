@@ -1,13 +1,16 @@
 /** @format */
 import React from 'react';
 import debounce from 'lodash.debounce';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setSearchValue } from '../../redux/filter/slice';
+import { selectFilter } from '../../redux/filter/selectors';
 
 export const Search: React.FC = () => {
+  const { searchValue } = useSelector(selectFilter);
   const dispatch = useDispatch();
-  const [value, setValue] = React.useState('');
+  const [value, setValue] = React.useState(searchValue || '');
   const inputRef = React.useRef<HTMLInputElement>(null);
+  const isMounted = React.useRef(false);
   const onClickClear = () => {
     setValue('');
     dispatch(setSearchValue(''));
@@ -23,6 +26,13 @@ export const Search: React.FC = () => {
     setValue(event.target.value);
     updateSearchValue(event.target.value);
   };
+  React.useEffect(() => {
+    if (isMounted.current) {
+      const json = JSON.stringify(searchValue);
+      localStorage.setItem('search', json);
+    }
+    isMounted.current = true;
+  }, [searchValue]);
   return (
     <div className="content__search search-content">
       <div className="search-content__items">
