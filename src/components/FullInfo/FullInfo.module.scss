@@ -21,18 +21,25 @@
   &__btn {
     margin-bottom: 31px;
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
     font-family: 'Karla';
     font-weight: 700;
     font-size: 18px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    svg {
-      margin-right: 8px;
+    a {
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 0.6;
+      }
     }
-    &:hover {
-      opacity: 0.6;
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0px, -50%);
+    }
+    span {
+      margin-left: 24px;
     }
     @media (max-width: 479.98px) {
       margin-bottom: 77px;

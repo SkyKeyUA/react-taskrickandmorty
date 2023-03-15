@@ -63,7 +63,7 @@ export const FullInfo: React.FC = () => {
                 fill="black"
               />
             </svg>
-            Go Back
+            <span>Go Back</span>
           </Link>
         </div>
         <div className={styles['fullstory__container-info']}>
